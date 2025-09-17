@@ -195,7 +195,7 @@ with st.sidebar:
     select= option_menu("MAIN MENU",["Home", "Price Prediction", "About"])
 
 if select == "Home":
-    img= Image.open(r"C:\Users\kumaram\Desktop\Singaore-Resale-Flat-Price-Prediction\1.jpg.png")
+    img= Image.open(r"1.jpg.png")
     st.image(img)
 
     st.header("HDB Flats:")
@@ -307,3 +307,4 @@ elif select == "About":
     
     st.header(":blue[Testing and Validation:]")
     st.write("Thoroughly test the deployed application to ensure it functions correctly and provides accurate predictions.")
+
