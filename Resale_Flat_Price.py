@@ -7,7 +7,7 @@ warnings.filterwarnings("ignore")
 from datetime import datetime
 import streamlit as st
 from streamlit_option_menu import option_menu
-import pickle
+import joblib
 from PIL import Image
 
 def town_mapping(town_map):
@@ -162,8 +162,7 @@ def predict_price(year, town, flat_type, flr_area_sqm, flat_model, stry_start, s
         lese_coms_dt = 2000
 
         # --- Load model ---
-        with open("Resale_Flat_Prices_Model_1.pkl", "rb") as f:
-            regg_model = pickle.load(f)
+        regg_model = joblib.load("Resale_Flat_Prices_Model_1.pkl")
 
         # --- Prepare user data ---
         user_data = np.array([[
